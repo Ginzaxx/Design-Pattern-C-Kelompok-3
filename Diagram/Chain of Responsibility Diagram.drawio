@@ -1,0 +1,369 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="peIZyRHM0rLZtcq8noDA">
+    <mxGraphModel dx="3300" dy="2473" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="k7yVob1kBOvveenXCsIK-5" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Game Maneger" vertex="1">
+          <mxGeometry height="170" width="220" x="290" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-6" parent="k7yVob1kBOvveenXCsIK-5" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;- HandGenerator handGenerator;&lt;/div&gt;&lt;div&gt;- HandPlayer handPlayer;&lt;/div&gt;&lt;div&gt;- ScoringRule scoringRule;&lt;/div&gt;&lt;div&gt;- BlindRule blindRule;&lt;/div&gt;&lt;div&gt;- RewardRule rewardRule;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-7" parent="k7yVob1kBOvveenXCsIK-5" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+ Void runSession();" vertex="1">
+          <mxGeometry height="40" width="220" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-9" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Scoring Rule" vertex="1">
+          <mxGeometry height="290" width="280" x="260" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-10" parent="k7yVob1kBOvveenXCsIK-9" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;- FiveOfAKindChecker fiveOfAKindChecker;&lt;/div&gt;&lt;div&gt;- FlushChecker flushChecker;&lt;/div&gt;&lt;div&gt;- FlushHouseChecker flushHouseChecker;&lt;/div&gt;&lt;div&gt;- FourOfAKindChecker fourOfAKindChecker;&lt;/div&gt;&lt;div&gt;- FullHouseChecker fullHouseChecker;&lt;/div&gt;&lt;div&gt;- HighCardChecker highCardChecker;&lt;/div&gt;&lt;div&gt;- PairChecker pairChecker;&lt;/div&gt;&lt;div&gt;- RoyalFlushChecker royalFlushChecker;&lt;/div&gt;&lt;div&gt;- StraightChecker straightChecker;&lt;/div&gt;&lt;div&gt;- StraightFlushChecker straightFlushChecker;&lt;/div&gt;&lt;div&gt;- ThreeOfAKindChecker threeOfAKindChecker;&lt;/div&gt;&lt;div&gt;- TwoPairChecker twoPairChecker;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="210" width="280" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-11" parent="k7yVob1kBOvveenXCsIK-9" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+ ScoringRule();&lt;div&gt;+ int scoreHand(const&amp;nbsp; Hand &amp;amp;hand);&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="280" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-74" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" target="k7yVob1kBOvveenXCsIK-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-78" connectable="0" parent="k7yVob1kBOvveenXCsIK-74" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Use" vertex="1">
+          <mxGeometry relative="1" x="-0.1019" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-12" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Hand Player" vertex="1">
+          <mxGeometry height="150" width="220" x="-40" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-13" parent="k7yVob1kBOvveenXCsIK-12" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="-Dummy;" vertex="1">
+          <mxGeometry height="40" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-14" parent="k7yVob1kBOvveenXCsIK-12" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+ Void playHand();" vertex="1">
+          <mxGeometry height="80" width="220" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-75" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" target="k7yVob1kBOvveenXCsIK-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-79" connectable="0" parent="k7yVob1kBOvveenXCsIK-75" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Use" vertex="1">
+          <mxGeometry relative="1" x="0.3035" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-15" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Hand Generator" vertex="1">
+          <mxGeometry height="150" width="220" x="-280" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-16" parent="k7yVob1kBOvveenXCsIK-15" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="-Dummy;" vertex="1">
+          <mxGeometry height="40" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-17" parent="k7yVob1kBOvveenXCsIK-15" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+ generateHand() : Hand" vertex="1">
+          <mxGeometry height="80" width="220" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-68" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" target="k7yVob1kBOvveenXCsIK-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-69" connectable="0" parent="k7yVob1kBOvveenXCsIK-68" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Use" vertex="1">
+          <mxGeometry relative="1" x="-0.0847" y="-4" as="geometry">
+            <mxPoint y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-18" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Hand Player" vertex="1">
+          <mxGeometry height="150" width="220" x="840" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-19" parent="k7yVob1kBOvveenXCsIK-18" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="-Dummy;" vertex="1">
+          <mxGeometry height="40" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-20" parent="k7yVob1kBOvveenXCsIK-18" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+ int earnMoney(bool win, int score);" vertex="1">
+          <mxGeometry height="80" width="220" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-73" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" target="k7yVob1kBOvveenXCsIK-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-76" connectable="0" parent="k7yVob1kBOvveenXCsIK-73" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Use" vertex="1">
+          <mxGeometry relative="1" x="-0.2118" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-21" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Hand Generator" vertex="1">
+          <mxGeometry height="150" width="220" x="600" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-22" parent="k7yVob1kBOvveenXCsIK-21" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="-Dummy;" vertex="1">
+          <mxGeometry height="40" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-23" parent="k7yVob1kBOvveenXCsIK-21" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="+ &lt;font face=&quot;Consolas, Courier New, monospace&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;font-size: 14px; white-space: pre;&quot;&gt;checkBlind(int score);&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="220" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-24" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Poker Hand&amp;nbsp; Checker" vertex="1">
+          <mxGeometry height="150" width="310" x="245" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-25" parent="k7yVob1kBOvveenXCsIK-24" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="PokerHandChecker* nextChecker = nullptr;" vertex="1">
+          <mxGeometry height="40" width="310" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-26" parent="k7yVob1kBOvveenXCsIK-24" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;+&amp;nbsp; virtual HandRank check(const Hand&amp;amp; hand) = 0;&lt;/div&gt;&lt;div&gt;+ void setNext(PokerHandChecker* next);&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="310" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-28" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Hand Rank" vertex="1">
+          <mxGeometry height="250" width="180" x="640" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-29" parent="k7yVob1kBOvveenXCsIK-28" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;HIGH_CARD,&lt;/div&gt;&lt;div&gt;PAIR,&lt;/div&gt;&lt;div&gt;TWO_PAIR,&lt;/div&gt;&lt;div&gt;THREE_OF_A_KIND,&lt;/div&gt;&lt;div&gt;STRAIGHT,&lt;/div&gt;&lt;div&gt;FLUSH,&lt;/div&gt;&lt;div&gt;FULL_HOUSE,&lt;/div&gt;&lt;div&gt;FOUR_OF_A_KIND,&lt;/div&gt;&lt;div&gt;STRAIGHT_FLUSH,&lt;/div&gt;&lt;div&gt;ROYAL_FLUSH,&lt;/div&gt;&lt;div&gt;FIVE_OF_A_KIND,&lt;/div&gt;&lt;div&gt;FLUSH_HOUSE,&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="180" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-84" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="k7yVob1kBOvveenXCsIK-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-100" connectable="0" parent="k7yVob1kBOvveenXCsIK-84" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Extends" vertex="1">
+          <mxGeometry relative="1" x="-0.917" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-31" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="High Card" vertex="1">
+          <mxGeometry height="140" width="310" x="-840" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-32" parent="k7yVob1kBOvveenXCsIK-31" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="310" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-33" parent="k7yVob1kBOvveenXCsIK-31" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ return nextChecker-&amp;gt;check(hand);&lt;/div&gt;&lt;div&gt;+ bool isHighCard(const Hand&amp;amp; hand)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-85" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="k7yVob1kBOvveenXCsIK-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-103" connectable="0" parent="k7yVob1kBOvveenXCsIK-85" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Extends" vertex="1">
+          <mxGeometry relative="1" x="-0.8812" y="3" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-34" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Pair" vertex="1">
+          <mxGeometry height="140" width="310" x="-470" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-35" parent="k7yVob1kBOvveenXCsIK-34" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="310" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-36" parent="k7yVob1kBOvveenXCsIK-34" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ return nextChecker-&amp;gt;check(hand);&lt;/div&gt;&lt;div&gt;+ bool isPair(const Hand&amp;amp; hand)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-86" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="k7yVob1kBOvveenXCsIK-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-104" connectable="0" parent="k7yVob1kBOvveenXCsIK-86" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Extends" vertex="1">
+          <mxGeometry relative="1" x="-0.7107" y="-2" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-37" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Two Pair" vertex="1">
+          <mxGeometry height="140" width="310" x="-110" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-38" parent="k7yVob1kBOvveenXCsIK-37" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="310" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-39" parent="k7yVob1kBOvveenXCsIK-37" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ return nextChecker-&amp;gt;check(hand);&lt;/div&gt;&lt;div&gt;+ bool isTwoPair(const Hand&amp;amp; hand)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-87" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="k7yVob1kBOvveenXCsIK-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-109" connectable="0" parent="k7yVob1kBOvveenXCsIK-87" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Extends" vertex="1">
+          <mxGeometry relative="1" x="-0.6815" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-40" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Three of a Kind" vertex="1">
+          <mxGeometry height="140" width="310" x="590" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-41" parent="k7yVob1kBOvveenXCsIK-40" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="310" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-42" parent="k7yVob1kBOvveenXCsIK-40" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ return nextChecker-&amp;gt;check(hand);&lt;/div&gt;&lt;div&gt;+ bool isTreeOfAKind(const Hand&amp;amp; hand)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-88" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="k7yVob1kBOvveenXCsIK-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-111" connectable="0" parent="k7yVob1kBOvveenXCsIK-88" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Extends" vertex="1">
+          <mxGeometry relative="1" x="-0.8578" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-43" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Straight" vertex="1">
+          <mxGeometry height="140" width="310" x="960" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-44" parent="k7yVob1kBOvveenXCsIK-43" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="310" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-45" parent="k7yVob1kBOvveenXCsIK-43" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ return nextChecker-&amp;gt;check(hand);&lt;/div&gt;&lt;div&gt;+ bool isStraight(const Hand&amp;amp; hand)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-89" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="k7yVob1kBOvveenXCsIK-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-112" connectable="0" parent="k7yVob1kBOvveenXCsIK-89" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Extends" vertex="1">
+          <mxGeometry relative="1" x="-0.924" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-46" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Flush" vertex="1">
+          <mxGeometry height="140" width="310" x="1320" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-47" parent="k7yVob1kBOvveenXCsIK-46" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="310" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-48" parent="k7yVob1kBOvveenXCsIK-46" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ return nextChecker-&amp;gt;check(hand);&lt;/div&gt;&lt;div&gt;+ bool isFlush(const Hand&amp;amp; hand)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-99" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="k7yVob1kBOvveenXCsIK-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-685" y="1080" />
+              <mxPoint x="400" y="1080" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-107" connectable="0" parent="k7yVob1kBOvveenXCsIK-99" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Extends" vertex="1">
+          <mxGeometry relative="1" x="-0.9384" y="-2" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-49" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Full House" vertex="1">
+          <mxGeometry height="140" width="310" x="-840" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-50" parent="k7yVob1kBOvveenXCsIK-49" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="310" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-51" parent="k7yVob1kBOvveenXCsIK-49" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ return nextChecker-&amp;gt;check(hand);&lt;/div&gt;&lt;div&gt;+ bool isFullHouse(const Hand&amp;amp; hand)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-98" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="k7yVob1kBOvveenXCsIK-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-315" y="1080" />
+              <mxPoint x="400" y="1080" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-106" connectable="0" parent="k7yVob1kBOvveenXCsIK-98" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Extends" vertex="1">
+          <mxGeometry relative="1" x="-0.921" y="-3" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-52" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Four of a Kind" vertex="1">
+          <mxGeometry height="140" width="310" x="-470" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-53" parent="k7yVob1kBOvveenXCsIK-52" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="310" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-54" parent="k7yVob1kBOvveenXCsIK-52" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ return nextChecker-&amp;gt;check(hand);&lt;/div&gt;&lt;div&gt;+ bool isFourOfAKind(const Hand&amp;amp; hand)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-97" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="k7yVob1kBOvveenXCsIK-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="45" y="1080" />
+              <mxPoint x="400" y="1080" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-105" connectable="0" parent="k7yVob1kBOvveenXCsIK-97" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Extends" vertex="1">
+          <mxGeometry relative="1" x="-0.8632" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-55" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Straight Flush" vertex="1">
+          <mxGeometry height="140" width="310" x="-110" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-56" parent="k7yVob1kBOvveenXCsIK-55" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="310" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-57" parent="k7yVob1kBOvveenXCsIK-55" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ return nextChecker-&amp;gt;check(hand);&lt;/div&gt;&lt;div&gt;+ bool isStraightFlush(const Hand&amp;amp; hand)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-94" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="k7yVob1kBOvveenXCsIK-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="745" y="1080" />
+              <mxPoint x="400" y="1080" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-108" connectable="0" parent="k7yVob1kBOvveenXCsIK-94" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Extends" vertex="1">
+          <mxGeometry relative="1" x="-0.8496" y="2" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-58" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Royal Flush" vertex="1">
+          <mxGeometry height="140" width="310" x="590" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-59" parent="k7yVob1kBOvveenXCsIK-58" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="310" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-60" parent="k7yVob1kBOvveenXCsIK-58" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ return nextChecker-&amp;gt;check(hand);&lt;/div&gt;&lt;div&gt;+ bool isRoyalFlush(const Hand&amp;amp; hand)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-95" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="k7yVob1kBOvveenXCsIK-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1115" y="1080" />
+              <mxPoint x="400" y="1080" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-110" connectable="0" parent="k7yVob1kBOvveenXCsIK-95" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Extends" vertex="1">
+          <mxGeometry relative="1" x="-0.9234" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-61" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Five of a Kind" vertex="1">
+          <mxGeometry height="140" width="310" x="960" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-62" parent="k7yVob1kBOvveenXCsIK-61" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="310" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-63" parent="k7yVob1kBOvveenXCsIK-61" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ return nextChecker-&amp;gt;check(hand);&lt;/div&gt;&lt;div&gt;+ bool isFiveOfAKind(const Hand&amp;amp; hand)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-96" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="k7yVob1kBOvveenXCsIK-26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1475" y="1080" />
+              <mxPoint x="400" y="1080" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-113" connectable="0" parent="k7yVob1kBOvveenXCsIK-96" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Extends" vertex="1">
+          <mxGeometry relative="1" x="-0.9379" y="-1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-64" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Flush House" vertex="1">
+          <mxGeometry height="140" width="310" x="1320" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-65" parent="k7yVob1kBOvveenXCsIK-64" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="30" width="310" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-66" parent="k7yVob1kBOvveenXCsIK-64" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;+ return nextChecker-&amp;gt;check(hand);&lt;/div&gt;&lt;div&gt;+ bool isFlushHouse(const Hand&amp;amp; hand)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="310" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-72" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" target="k7yVob1kBOvveenXCsIK-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-77" connectable="0" parent="k7yVob1kBOvveenXCsIK-72" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Use" vertex="1">
+          <mxGeometry relative="1" x="0.0532" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-80" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" target="k7yVob1kBOvveenXCsIK-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-81" connectable="0" parent="k7yVob1kBOvveenXCsIK-80" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Use" vertex="1">
+          <mxGeometry relative="1" x="0.0017" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-82" edge="1" parent="1" source="k7yVob1kBOvveenXCsIK-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" target="k7yVob1kBOvveenXCsIK-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k7yVob1kBOvveenXCsIK-83" connectable="0" parent="k7yVob1kBOvveenXCsIK-82" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Use" vertex="1">
+          <mxGeometry relative="1" x="-0.0541" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

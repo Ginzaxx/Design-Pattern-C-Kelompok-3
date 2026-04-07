@@ -6,12 +6,31 @@ ScoringRule::ScoringRule(){
 // Sambungkan chain di sini dengan setNext()
 // Urutan: checker tertinggi → ... → highCardChecker (selalu terakhir)
 //
-// Contoh kalau sudah ada FlushChecker dan PairChecker:
-//   flushChecker.setNext(&pairChecker);
+// Contoh kalau sudah ada RoyalFlushChecker, FiveOfAKindChecker, dan FlushHouseChecker:
+//   royalFlushChecker.setNext(&straightFlushChecker);
+//   straightFlushChecker.setNext(&fourOfAKindChecker);
+//   fourOfAKindChecker.setNext(&fullHouseChecker);
+//   fullHouseChecker.setNext(&flushHouseChecker);
+//   flushHouseChecker.setNext(&flushChecker);
+//   flushChecker.setNext(&straightChecker);
+//   straightChecker.setNext(&threeOfAKindChecker);
+//   threeOfAKindChecker.setNext(&twoPairChecker);
+//   twoPairChecker.setNext(&pairChecker);
 //   pairChecker.setNext(&highCardChecker);
 //
 // Lalu ganti baris scoreHand() agar mulai dari checker pertama:
-//   HandRank rank = flushChecker.check(hand);
+//   HandRank rank = royalFlushChecker.check(hand);
+royalFlushChecker.setNext(&fiveOfAKindChecker);
+fiveOfAKindChecker.setNext(&straightFlushChecker);
+straightFlushChecker.setNext(&fourOfAKindChecker);
+fourOfAKindChecker.setNext(&fullHouseChecker);
+fullHouseChecker.setNext(&flushHouseChecker);
+flushHouseChecker.setNext(&flushChecker);
+flushChecker.setNext(&straightChecker);
+straightChecker.setNext(&threeOfAKindChecker);
+threeOfAKindChecker.setNext(&twoPairChecker);
+twoPairChecker.setNext(&pairChecker);
+pairChecker.setNext(&highCardChecker);
 
 }
 
@@ -21,7 +40,7 @@ std::cout << "Calculating hand score...\n";
 
 // Ganti highCardChecker dengan checker pertama di chain
 // setelah kamu menambahkan checker baru
-HandRank rank = highCardChecker.check(hand);
+HandRank rank = royalFlushChecker.check(hand);
 
 int score = convertRankToScore(rank);
 
@@ -37,6 +56,28 @@ switch (rank){
 
 // Tambah case baru di sini setiap ada HandRank baru
 
+case HandRank::FLUSH_HOUSE:
+return 120;
+case HandRank::FIVE_OF_A_KIND:
+return 110;
+case HandRank::ROYAL_FLUSH:
+return 100;
+case HandRank::STRAIGHT_FLUSH:
+return 90;
+case HandRank::FOUR_OF_A_KIND:
+return 80;
+case HandRank::FULL_HOUSE:
+return 70;
+case HandRank::FLUSH:
+return 60;
+case HandRank::STRAIGHT:
+return 50;
+case HandRank::THREE_OF_A_KIND:
+return 40;
+case HandRank::TWO_PAIR:
+return 30;
+case HandRank::PAIR:
+return 20;
 case HandRank::HIGH_CARD:
 default:
 return 5;

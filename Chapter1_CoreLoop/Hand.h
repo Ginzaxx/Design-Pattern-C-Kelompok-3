@@ -1,7 +1,5 @@
 #pragma once
 
 struct Hand{
-
-int value = 0;
-
+    int value = 0;
 };

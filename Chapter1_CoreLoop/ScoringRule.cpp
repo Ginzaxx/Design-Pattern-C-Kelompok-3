@@ -20,12 +20,12 @@ ScoringRule::ScoringRule(){
 //
 // Lalu ganti baris scoreHand() agar mulai dari checker pertama:
 //   HandRank rank = royalFlushChecker.check(hand);
-royalFlushChecker.setNext(&fiveOfAKindChecker);
-fiveOfAKindChecker.setNext(&straightFlushChecker);
+flushHouseChecker.setNext(&fiveOfAKindChecker);
+fiveOfAKindChecker.setNext(&royalFlushChecker);
+royalFlushChecker.setNext(&straightFlushChecker);
 straightFlushChecker.setNext(&fourOfAKindChecker);
 fourOfAKindChecker.setNext(&fullHouseChecker);
-fullHouseChecker.setNext(&flushHouseChecker);
-flushHouseChecker.setNext(&flushChecker);
+fullHouseChecker.setNext(&flushChecker);
 flushChecker.setNext(&straightChecker);
 straightChecker.setNext(&threeOfAKindChecker);
 threeOfAKindChecker.setNext(&twoPairChecker);
@@ -40,7 +40,7 @@ std::cout << "Calculating hand score...\n";
 
 // Ganti highCardChecker dengan checker pertama di chain
 // setelah kamu menambahkan checker baru
-HandRank rank = royalFlushChecker.check(hand);
+HandRank rank = flushHouseChecker.check(hand);
 
 int score = convertRankToScore(rank);
 

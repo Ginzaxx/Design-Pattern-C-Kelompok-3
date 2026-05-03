@@ -1,25 +1,29 @@
 #include <iostream>
-#include <cstdlib>
+#include <vector>
+#include <algorithm>
 #include <ctime>
+#include <random>
 #include "HandGenerator.h"
 
-Hand HandGenerator::generateHand(){
-
+Hand HandGenerator::generateHand() {
     std::cout << "Generating cards for player...\n";
 
-    std::srand(static_cast<unsigned int>(std::time(nullptr)));
-    Hand hand;
-    hand.value = std::rand() % 13; // random value 0-12
-    std::cout << "Random hand value: " << hand.value << std::endl;
-
-    char choice;
-    std::cout << "Do you want to input a custom hand value for checking? (y/n): ";
-    std::cin >> choice;
-    if (choice == 'y' || choice == 'Y') {
-        std::cout << "Enter hand value (0-12): ";
-        std::cin >> hand.value;
-        std::cout << "Using custom hand value: " << hand.value << std::endl;
+    std::vector<Card> deck;
+    char suits[] = {'H', 'D', 'C', 'S'};
+    for (int r = 2; r <= 14; ++r) {
+        for (char s : suits) {
+            deck.push_back({r, s});
+        }
     }
-    return hand;
 
+    static std::mt19937 g(static_cast<unsigned int>(std::time(nullptr)));
+    std::shuffle(deck.begin(), deck.end(), g);
+
+    Hand hand;
+    for (int i = 0; i < 8; ++i) {
+        hand.cards.push_back(deck[i]);
+    }
+
+    std::cout << "Hand generated with 8 cards.\n";
+    return hand;
 }

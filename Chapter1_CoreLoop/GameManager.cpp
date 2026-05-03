@@ -7,9 +7,9 @@ std::cout << "=== Run Started ===\n";
 
 Hand hand = handGenerator.generateHand();
 
-handPlayer.playHand();
+ChosenHand chosen = handPlayer.playHand(hand);
 
-int score = scoringRule.scoreHand(hand);
+int score = scoringRule.scoreHand(chosen);
 
 bool win = blindRule.checkBlind(score);
 

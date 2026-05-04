@@ -34,7 +34,7 @@ pairChecker.setNext(&highCardChecker);
 
 }
 
-int ScoringRule::scoreHand(const Hand& hand){
+int ScoringRule::scoreHand(const ChosenHand& hand){
 
 std::cout << "Calculating hand score...\n";
 

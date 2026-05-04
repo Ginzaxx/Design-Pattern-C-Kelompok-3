@@ -1,15 +1,23 @@
 #include <iostream>
 #include "FlushHouseChecker.h"
-// dummy helper
-bool isFlushHouse(const Hand& hand){
-return hand.value == 12;
-}
-HandRank FlushHouseChecker::check(const Hand& hand){
-if (isFlushHouse(hand)){
-std::cout << "Detected FLUSH HOUSE\n";
-return HandRank::FLUSH_HOUSE;
-}
-if (nextChecker)
-return nextChecker->check(hand);
-return HandRank::HIGH_CARD;
+
+HandRank FlushHouseChecker::check(const ChosenHand& hand) {
+    bool hasThree = false;
+    bool hasTwo = false;
+    auto counts = countRanks(hand);
+    
+    for (auto const& [rank, count] : counts) {
+        if (count == 3) hasThree = true;
+        if (count == 2) hasTwo = true;
+    }
+
+    if (isFlush(hand) && hasThree && hasTwo) {
+        std::cout << "Detected FLUSH HOUSE\n";
+        return HandRank::FLUSH_HOUSE;
+    }
+
+    if (nextChecker) {
+        return nextChecker->check(hand);
+    }
+    return HandRank::HIGH_CARD;
 }

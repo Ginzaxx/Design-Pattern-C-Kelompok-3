@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Hand.h"
+#include "ChosenHand.h"
 #include "PokerHandChecker.h"
 #include "RoyalFlushChecker.h"
 #include "StraightFlushChecker.h"
@@ -27,7 +27,7 @@ public:
 
 ScoringRule();
 
-int scoreHand(const Hand& hand);
+int scoreHand(const ChosenHand& hand);
 
 private:
 

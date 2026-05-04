@@ -1,6 +1,9 @@
 #pragma once
 
-#include "Hand.h"
+#include <map>
+#include <vector>
+#include <algorithm>
+#include "ChosenHand.h"
 
 // Tambah entry baru di sini kalau ada hand baru
 enum class HandRank {
@@ -22,12 +25,18 @@ class PokerHandChecker{
 
 public:
 
-virtual HandRank check(const Hand& hand) = 0;
+virtual HandRank check(const ChosenHand& hand) = 0;
 
 void setNext(PokerHandChecker* next);
 
 protected:
 
 PokerHandChecker* nextChecker = nullptr;
+
+// Helpers for subclasses
+std::map<int, int> countRanks(const ChosenHand& hand);
+std::map<char, int> countSuits(const ChosenHand& hand);
+bool isStraight(const ChosenHand& hand);
+bool isFlush(const ChosenHand& hand);
 
 };

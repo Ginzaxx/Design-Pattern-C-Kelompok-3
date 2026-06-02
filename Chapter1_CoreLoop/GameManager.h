@@ -5,23 +5,22 @@
 #include "ScoringRule.h"
 #include "BlindRule.h"
 #include "RewardRule.h"
+#include "SessionState.h"
+#include "ShopSystem.h"
+#include <memory>
 
-class GameManager{
-
+class GameManager {
 public:
-
-void runSession();
+    GameManager();
+    void runSession();
 
 private:
-
-HandGenerator handGenerator;
-
-HandPlayer handPlayer;
-
-ScoringRule scoringRule;
-
-BlindRule blindRule;
-
-RewardRule rewardRule;
-
+    HandGenerator handGenerator;
+    HandPlayer handPlayer;
+    ScoringRule scoringRule;
+    BlindRule blindRule;
+    RewardRule rewardRule;
+    ShopSystem shopSystem;
+    
+    SessionState session;
 };

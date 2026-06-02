@@ -29,7 +29,7 @@ Saat pemain memilih SKIP, *reward* tidak langsung diberikan. *Reward* tersebut d
 ---
 
 ### 4. Runtime State (`SessionState`)
-Objek utama yang menyimpan seluruh data berjalannya game (*current ante*, *total score*, jumlah *plays/discards*, *state* saat ini, dan antrean *reward* yang tertunda).
+Objek utama yang menyimpan seluruh data berjalannya game (*current ante*, *total score*, jumlah *plays*, *state* saat ini, dan antrean *reward* yang tertunda).
 
 **Alur Permainan:**
 1. **Mulai Blind:** Target skor dan hadiah ditentukan.
@@ -39,7 +39,3 @@ Objek utama yang menyimpan seluruh data berjalannya game (*current ante*, *total
 3. **Eksekusi Tertunda:** Sistem akan mengeksekusi `RewardCommand` dari antrean hanya saat syarat *timing*-nya tercapai.
 
 ---
-
-### 5. Aturan Teknis Tambahan
-* Menggunakan **Smart Pointers** (`std::unique_ptr` / `std::shared_ptr`) untuk manajemen memori objek *State* dan *Command*.
-* Menghindari penggunaan if-else/switch case yang panjang dalam mengatur alur game.
